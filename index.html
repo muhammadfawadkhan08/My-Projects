@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project1</title>
+<style>
+
+
+/*
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: rgb(80, 75, 75);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+
+
+.btn{
+
+    background: rgb(255, 0, 212);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 800;
+    padding: 20px 40px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgb(0, 218, 247);
+  
+}
+
+span{
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    background-color:  rgb(26, 59, 63);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    /* left: var(--xPos); 
+    /* top: var(--yPos); 
+    
+     top:50%;
+    left:50%;
+
+    transform: translate(-50%,-50%);
+    transition: 0.5s ease-in-out;
+
+}
+
+.btn:hover::before{
+    width: 150px;
+    height: 150px;
+
+   
+}
+
+.btn:hover{
+    color: rgb(255, 255, 255);
+    transition: 0.5s ease-in-out;
+   
+    
+}
+
+its for simple animation just html and css
+*/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: rgb(212, 119, 119);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+position: relative;
+}
+
+
+
+
+.btn{
+    
+    overflow: hidden;
+    background: rgb(77, 44, 71);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 800;
+    padding: 20px 40px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgb(0, 218, 247);
+    
+}
+
+span{
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    background-color:  rgb(255, 72, 0);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    left: var(--xPos); 
+    top: var(--yPos); 
+    
+     /* top:50%; */
+    /* left:50%; */
+
+    transform: translate(-50%,-50%);
+    transition: width .5s,height .5s  ;
+
+}
+
+.btn:hover::before{
+    width: 300px;
+    height: 300px;
+   }
+
+
+
+
+.btn:hover{
+    color: rgb(255, 255, 255);
+    transition: 0.5s ease-in-out;
+   
+   
+    
+}
+
+
+
+
+
+
+</style>
+
+
+</head>
+<body>
+    
+
+    <a href="#" class="btn"><span>Button</span></a>
+    
+    <script>
+
+const btnEl =document.querySelector('.btn');
+
+btnEl.addEventListener('mouseover',(event)=>{
+
+    const x = (event.pageX - btnEl.offsetLeft);
+    const y = (event.pageY - btnEl.offsetTop);
+
+    btnEl.style.setProperty("--xPos",x +"px")
+    btnEl.style.setProperty("--yPos",y +"px")
+
+});
+
+
+const divEl =document.querySelector('div');
+
+divEl.addEventListener('mouseenter',(sfc)=>{
+
+    const x = (sfc.pageX - divEl.offsetLeft);
+    const y = (sfc.pageY - divEl.offsetTop);
+
+    divEl.style.setProperty("--xxPos",x +"px")
+    divEl.style.setProperty("--yyPos",y +"px")
+
+})
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
